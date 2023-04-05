@@ -209,11 +209,11 @@ Pool informs miners about job (work) by sending:
 First parameter of params array is job ID (must be HEX number of any
 size). Second parameter is seedhash. Seedhash is sent with every job to
 support possible multipools, which may switch between coins quickly.
-Third parameter is headerhash. Last parameter is boolean cleanjobs. 
+Third parameter is headerhash. Fourth parameter is boolean cleanjobs. 
 If set to true, then miner needs to clear queue of jobs and immediatelly
 start working on new provided job, because all old jobs shares will
 result with stale share error.
-Fourth parameter is the remaining time for the next round of zilliqa.
+Last parameter is the remaining time for the next round of zilliqa.
 
 Miner uses seedhash to identify DAG, then tries to find share below
 target (which is created out of provided difficulty) with headerhash,
